@@ -10,8 +10,8 @@ export function HeroHighlightDemo() {
 
   return (
     <HeroHighlight>
-      <div className="flex flex-col-reverse md:flex-row w-full h-full px-4 gap-y-10 ">
-        <div className="flex flex-col items-center justify-center gap-y-4">
+      <div className="flex flex-col-reverse md:flex-row w-full px-4 h-full py-20 gap-y-8">
+        <div className="flex flex-col items-center justify-center gap-y-4 ">
           <motion.h1
             initial={{
               opacity: 0,
@@ -25,15 +25,15 @@ export function HeroHighlightDemo() {
               duration: 0.5,
               ease: [0.4, 0.0, 0.2, 1],
             }}
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
           >
             {/* Title & Subtitle */}
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-2">
               <div className="heading leading-normal md:leading-tight text-center md:text-left text-white">
                 <Highlight>Învață și Crește</Highlight> alături de o comunitate
                 dedicată programării!
               </div>
-              <div className="body-text text-center md:text-left md:pr-6 text-white font-normal md:text-md lg:text-lg">
+              <div className="body-text text-center md:text-left md:pr-6 text-white font-normal text-sm md:text-md lg:text-lg">
                 Fie că ești la început de drum sau ai absolvit deja un curs și
                 cauți un loc de muncă, suntem aici pentru a te
                 <FlipWords words={words} />
@@ -53,7 +53,7 @@ export function HeroHighlightDemo() {
             />
           </div>
         </div>
-        <div className="flex mt-24 md:mt-0">
+        <div className=" my-auto max-w-[700px] max-h-[700px]">
           <Image
             src={"/learning-tree.png"}
             alt="header"
