@@ -8,8 +8,7 @@ export default function Home() {
       <div className="flex flex-col max-w-[1440px] mx-auto">
         <NavbarDemo />
         <HeroHighlightDemo />
-        {/* <SparklesContent /> */}
-        <div>{/* <WobbleCardDemo /> */}</div>
+        <WobbleCardDemo />
       </div>
     </main>
   );
