@@ -10,7 +10,7 @@ export function HeroHighlightDemo() {
 
   return (
     <HeroHighlight>
-      <div className="flex flex-col-reverse md:flex-row w-full px-4 h-full py-20 gap-y-8">
+      <div className="flex flex-col-reverse md:flex-row w-full px-4 md:px-0 h-full py-20 lg:py-32 lg:gap-x-10 gap-y-8">
         <div className="flex flex-col items-center justify-center gap-y-4 ">
           <motion.h1
             initial={{

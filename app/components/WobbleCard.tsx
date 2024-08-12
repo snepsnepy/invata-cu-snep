@@ -28,14 +28,14 @@ export function WobbleCardDemo() {
 
   return (
     <HeroHighlight>
-      <div className="pb-20 px-4">
+      <div className="pb-20">
         <TypewriterEffectSmoothDemo
           words={cardWords}
           description={description}
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full">
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border border-black"
           className=""

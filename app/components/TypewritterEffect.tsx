@@ -14,7 +14,7 @@ export function TypewriterEffectSmoothDemo({ words, description }: Words) {
   return (
     <div className="flex flex-col items-center justify-center">
       <TypewriterEffectSmooth words={words} />
-      <p className="dark:text-white text-sm md:text-md lg:text-lg font-normal text-center">
+      <p className="dark:text-white text-sm md:text-md lg:text-lg font-normal text-center max-w-2xl">
         {description}
       </p>
     </div>
