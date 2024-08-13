@@ -34,7 +34,7 @@ export const HeroHighlight = ({
       )}
       onMouseMove={handleMouseMove}
     >
-      <div className="h-full w-full dark:bg-[#47B5FF] bg-white  dark:bg-dot-white/50 bg-dot-black/[0.2] relative flex items-center justify-center">
+      <div className="h-full w-full dark:bg-[#47B5FF] bg-white dark:bg-dot-white/50 bg-dot-black/[0.2] relative flex items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#47B5FF] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         <motion.div
           className="pointer-events-none bg-dot-thick-indigo-500 dark:bg-dot-thick-white absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 "

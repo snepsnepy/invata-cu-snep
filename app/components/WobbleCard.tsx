@@ -27,8 +27,8 @@ export function WobbleCardDemo() {
         tale de interviu și poți găsi oferte de joburi potrivite pentru tine.`;
 
   return (
-    <HeroHighlight>
-      <div className="pb-20">
+    <HeroHighlight className="py-20 lg:py-32">
+      <div className="pb-20 ">
         <TypewriterEffectSmoothDemo
           words={cardWords}
           description={description}
@@ -41,7 +41,7 @@ export function WobbleCardDemo() {
           className=""
         >
           <div className="max-w-xs">
-            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-bold tracking-[-0.015em] text-black">
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-4xl font-bold tracking-[-0.015em] text-black">
               Mentorat Personalizat
             </h2>
             <p className="mt-4 text-left text-base/6 text-black font-semibold">
@@ -59,7 +59,7 @@ export function WobbleCardDemo() {
           />
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#EE4E4E] border border-black">
-          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-bold tracking-[-0.015em] text-white">
+          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-4xl font-bold tracking-[-0.015em] text-white">
             Învățare practică și interactivă
           </h2>
           <p className="mt-4 max-w-[26rem] text-left text-base/6 text-white ">
@@ -69,7 +69,7 @@ export function WobbleCardDemo() {
           </p>
         </WobbleCard>
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-white border border-black">
-          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-bold tracking-[-0.015em] text-black">
+          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-4xl font-bold tracking-[-0.015em] text-black">
             Oportunități de carieră
           </h2>
           <p className="mt-4 max-w-[26rem] text-left text-base/6 text-black ">
@@ -82,7 +82,7 @@ export function WobbleCardDemo() {
           className=""
         >
           <div className="max-w-xs">
-            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-bold tracking-[-0.015em] text-white">
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-4xl font-bold tracking-[-0.015em] text-white">
               Resurse Diverse
             </h2>
             <p className="mt-4 text-left  text-base/6 text-white">

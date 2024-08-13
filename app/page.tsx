@@ -1,4 +1,5 @@
 import { HeroHighlightDemo } from "./components/HeroHighlightDemo";
+import { HeroScrollDemo } from "./components/HeroScroll";
 import { NavbarDemo } from "./components/NavBarMenu";
 import { WobbleCardDemo } from "./components/WobbleCard";
 
@@ -9,6 +10,7 @@ export default function Home() {
         <NavbarDemo />
         <HeroHighlightDemo />
         <WobbleCardDemo />
+        <HeroScrollDemo />
       </div>
     </main>
   );
