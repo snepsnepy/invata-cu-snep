@@ -35,7 +35,7 @@ export const CardSpotlight = ({
   return (
     <div
       className={cn(
-        "group/spotlight p-10 rounded-md relative border dark:bg-white dark:border-black rounded-2xl",
+        "group/spotlight p-10 rounded-md relative border dark:bg-white dark:border-black rounded-2xl ",
         className
       )}
       onMouseMove={handleMouseMove}
@@ -44,7 +44,7 @@ export const CardSpotlight = ({
       {...props}
     >
       <motion.div
-        className="pointer-events-none absolute z-0 -inset-px rounded-2xl opacity-0 transition duration-300 md:group-hover/spotlight:opacity-100"
+        className="pointer-events-none absolute z-0 -inset-px rounded-2xl opacity-0 transition duration-300 md:group-hover/spotlight:opacity-50"
         style={{
           backgroundColor: color,
           maskImage: useMotionTemplate`

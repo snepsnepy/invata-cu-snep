@@ -1,54 +1,102 @@
 import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { TailwindcssButtons } from "./Buttons";
 
 export function CardSpotlightDemo() {
-  return (
-    <div className="flex flex-col w-full items-center lg:flex-row h-full gap-y-10 md:gap-x-10">
-      <CardSpotlight className="h-full w-full md:min-w-[20rem] text-center dark:bg-white">
-        <p className="text-xl font-bold relative z-20 mt-2 text-black">
-          Authentication steps
-        </p>
-        <div className="flex flex-col items-center text-black mt-4 relative z-20">
-          Follow these steps to secure your account:
-          <ul className="list-none mt-2">
-            <Step title="Enter your email address" />
-            <Step title="Create a strong password" />
-            <Step title="Set up two-factor authentication" />
-            <Step title="Verify your identity" />
-          </ul>
-        </div>
-        <p className="text-black mt-4 relative z-20 text-sm">
-          Ensuring your account is properly secured helps protect your personal
-          information and data.
-        </p>
-      </CardSpotlight>
+  const plans = [
+    {
+      standard: true,
+      title: "Standard",
+      description:
+        "Acces la tutoriale, articole și exerciții săptămânale. Ideal pentru învățare în ritmul propriu.",
+      price: "49 RON",
+      benefits: [
+        "Enter your email address",
+        "Create a strong password",
+        "Set up two-factor authentication",
+        "Verify your identity",
+        "Set up two-factor authentication",
+        "Verify your identity",
+      ],
+    },
+    {
+      standard: false,
+      title: "Premium",
+      description:
+        "Acces total, mentorat personalizat și resurse exclusive. Ideal pentru progres accelerat.",
+      price: "99 RON",
+      benefits: [
+        "Enter your email address Premium",
+        "Create a strong password Premium",
+        "Set up two-factor authentication Premium",
+        "Verify your identity Premium",
+        "Set up two-factor authentication Premium",
+        "Verify your identity Premium",
+      ],
+    },
+  ];
 
-      <CardSpotlight className="h-full w-full md:min-w-[20rem] text-center dark:bg-[#FFC94A]">
-        <p className="text-xl font-bold relative z-20 mt-2 text-black">
-          Authentication steps
-        </p>
-        <div className="flex flex-col items-center text-black mt-4 relative z-20">
-          Follow these steps to secure your account:
-          <ul className="list-none mt-2">
-            <Step title="Enter your email address" />
-            <Step title="Create a strong password" />
-            <Step title="Set up two-factor authentication" />
-            <Step title="Verify your identity" />
-          </ul>
-        </div>
-        <p className="text-black mt-4 relative z-20 text-sm">
-          Ensuring your account is properly secured helps protect your personal
-          information and data.
-        </p>
-      </CardSpotlight>
+  return (
+    <div className="flex flex-col w-full items-center lg:flex-row h-full gap-y-4 md:gap-x-10">
+      {plans.map((plan, index) => (
+        <CardSpotlight
+          key={index}
+          className={`h-full w-full md:min-w-[20rem] text-center ${
+            plan.standard ? "dark:bg-white" : "dark:bg-[#FFC94A]"
+          }`}
+        >
+          <div className="flex flex-col items-center justify-center text-black  gap-y-8 h-full">
+            <div className="text-2xl md:text-4xl font-bold text-black">
+              {plan.title}
+            </div>
+            <div className="font-normal text-sm md:text-md">
+              {plan.description}
+            </div>
+            <div>
+              <p
+                className={`${
+                  plan.standard ? "text-[#FFC94A]" : "text-black"
+                } font-bold text-4xl md:text-6xl`}
+              >
+                {plan.price}{" "}
+                <span
+                  className={`${
+                    plan.standard ? "text-[#FFC94A]" : "text-black"
+                  } text-sm md:text-xl font-normal`}
+                >
+                  {" "}
+                  /lună
+                </span>
+              </p>
+              {/* <button className="btn bg-blue-100">Cumpara acum</button> */}
+            </div>
+            <div className="flex flex-col font-semibold gap-y-2">
+              {plan.benefits.map((benefit, index) => (
+                <Step key={index} title={benefit} />
+              ))}
+            </div>
+            <div>
+              <TailwindcssButtons
+                buttonName="Alege pachetul"
+                buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,black_30%,black_100%)]"
+                buttonClass={`${
+                  plan.standard
+                    ? "bg-[#FFC94A] hover:bg-white"
+                    : "bg-white hover:bg-[#FFC94A]"
+                } inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full  px-12 py-4 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl `}
+              />
+            </div>
+          </div>
+        </CardSpotlight>
+      ))}
     </div>
   );
 }
 
 const Step = ({ title }: { title: string }) => {
   return (
-    <li className="flex gap-2 items-start">
+    <li className="flex gap-2 items-center">
       <CheckIcon />
-      <p className="text-black">{title}</p>
+      <p className="w-full text-black text-left text-sm md:text-md">{title}</p>
     </li>
   );
 };
@@ -57,17 +105,14 @@ const CheckIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="h-4 w-4 text-blue-500 mt-1 flex-shrink-0"
+      className="size-6 text-[#059212]"
     >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path
-        d="M12 2c-.218 0 -.432 .002 -.642 .005l-.616 .017l-.299 .013l-.579 .034l-.553 .046c-4.785 .464 -6.732 2.411 -7.196 7.196l-.046 .553l-.034 .579c-.005 .098 -.01 .198 -.013 .299l-.017 .616l-.004 .318l-.001 .324c0 .218 .002 .432 .005 .642l.017 .616l.013 .299l.034 .579l.046 .553c.464 4.785 2.411 6.732 7.196 7.196l.553 .046l.579 .034c.098 .005 .198 .01 .299 .013l.616 .017l.642 .005l.642 -.005l.616 -.017l.299 -.013l.579 -.034l.553 -.046c4.785 -.464 6.732 -2.411 7.196 -7.196l.046 -.553l.034 -.579c.005 -.098 .01 -.198 .013 -.299l.017 -.616l.005 -.642l-.005 -.642l-.017 -.616l-.013 -.299l-.034 -.579l-.046 -.553c-.464 -4.785 -2.411 -6.732 -7.196 -7.196l-.553 -.046l-.579 -.034a28.058 28.058 0 0 0 -.299 -.013l-.616 -.017l-.318 -.004l-.324 -.001zm2.293 7.293a1 1 0 0 1 1.497 1.32l-.083 .094l-4 4a1 1 0 0 1 -1.32 .083l-.094 -.083l-2 -2a1 1 0 0 1 1.32 -1.497l.094 .083l1.293 1.292l3.293 -3.292z"
-        fill="currentColor"
-        strokeWidth="0"
+        fillRule="evenodd"
+        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+        clipRule="evenodd"
       />
     </svg>
   );

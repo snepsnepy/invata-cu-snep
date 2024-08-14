@@ -36,14 +36,18 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[60rem] md:h-[80rem] flex items-center justify-center relative md:p-20"
+      className="xs:h-[40rem] md:h-[80rem] flex items-center justify-center relative md:p-20"
       ref={containerRef}
     >
       <div
         className="py-10 md:py-40 w-full relative"
-        style={{
-          perspective: "1000px",
-        }}
+        style={
+          !isMobile
+            ? {
+                perspective: "1000px",
+              }
+            : {}
+        }
       >
         <Header translate={translate} titleComponent={titleComponent} />
         <Card rotate={rotate} translate={translate} scale={scale}>
@@ -60,7 +64,7 @@ export const Header = ({ translate, titleComponent }: any) => {
       style={{
         translateY: translate,
       }}
-      className="div max-w-5xl mx-auto text-center"
+      className="div max-w-5xl mx-auto text-center py-20 md:py-0"
     >
       {titleComponent}
     </motion.div>
