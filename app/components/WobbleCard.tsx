@@ -46,7 +46,7 @@ export function WobbleCardDemo() {
                 <span className="text-black/50">0</span>1
               </div>
               <h2 className="text-left my-auto text-balance text-xl lg:text-3xl font-bold tracking-[-0.015em] text-black">
-                Mentorat Personalizat
+                Mentorat <br /> Personalizat
               </h2>
             </div>
 
