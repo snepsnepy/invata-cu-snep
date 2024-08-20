@@ -44,16 +44,16 @@ export function HeroHighlightDemo() {
           <div className="flex flex-row justify-center md:justify-start w-full md:space-y-0 space-x-2 md:space-x-4">
             <TailwindcssButtons
               buttonName="Intră în cont"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl border border-black hover:bg-white hover:border hover:bg-[#FFC94A]"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl border-2 border-black hover:bg-white hover:border-2 hover:bg-white/80"
             />
             <TailwindcssButtons
               buttonName="Crează un cont"
               buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,black_30%,black_100%)]"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#FFC94A] px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl hover:bg-white"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#FFC94A] px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl hover:bg-white border-2 border-black"
             />
           </div>
         </div>
-        <div className=" my-auto max-w-[700px] max-h-[700px]">
+        <div className=" my-auto max-w-[700px] max-h-[700px] border-2 border-black rounded-full">
           <Image
             src={"/learning-tree.png"}
             alt="header"

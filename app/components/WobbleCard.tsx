@@ -8,17 +8,23 @@ import { TypewriterEffectSmoothDemo } from "./TypewritterEffect";
 export function WobbleCardDemo() {
   const cardWords = [
     {
-      text: "Pentru     ",
+      text: "De ce",
     },
     {
-      text: "începătorii",
+      text: "merita",
       className: "dark:text-[#FFC94A] stroke-black",
     },
     {
-      text: "în",
+      text: "sa",
     },
     {
-      text: "IT",
+      text: "inveti",
+    },
+    {
+      text: "cu",
+    },
+    {
+      text: "noi",
     },
   ];
 
@@ -28,16 +34,26 @@ export function WobbleCardDemo() {
 
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <div className="pb-20 ">
-        <TypewriterEffectSmoothDemo
-          words={cardWords}
-          description={description}
-        />
+      <div className="flex flex-row mb-20 border-2 border-black rounded-2xl bg-[#FFC94A]">
+        <div className="w-1/2 bg-white py-20 m-2 overflow-visible text-center rounded-2xl">
+          <p className="text-black font-bold text-5xl">
+            De ce merita sa inveti cu noi?
+          </p>
+        </div>
+        <div className="flex flex-col w-full  m-2 justify-center text-center">
+          <p className="text-black text-2xl font-medium">
+            Într-o lume plină de cursuri costisitoare și uneori inutile,
+            platforma noastră îți oferă o alternativă accesibilă și eficientă.
+            Aici, nu trebuie să cheltuiești sume mari de bani pentru a învăța
+            programare web. Beneficiezi de o pregătire constantă, resurse
+            relevante și suport personalizat, toate într-un singur loc.
+          </p>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border-2 border-black"
           className=""
         >
           <div className="max-w-xs px-2">
@@ -64,7 +80,7 @@ export function WobbleCardDemo() {
             className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl px-2"
           />
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#EE4E4E] border border-black">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#EE4E4E] border-2 border-black">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-white ">
               <span className="opacity-50">0</span>2
@@ -79,7 +95,7 @@ export function WobbleCardDemo() {
             bine conceptele.
           </p>
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border border-black">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border-2 border-black">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-black">
               <span className="opacity-50">0</span>3
@@ -95,7 +111,7 @@ export function WobbleCardDemo() {
           </p>
         </WobbleCard>
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#06283D] min-h-[500px] lg:min-h-[300px] border border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#06283D] min-h-[500px] lg:min-h-[300px] border-2 border-black"
           className=""
         >
           <div className="max-w-xs">
