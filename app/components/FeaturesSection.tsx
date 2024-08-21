@@ -17,7 +17,7 @@ export default function FeaturesSection() {
   return (
     <HeroHighlight className="py-32">
       <div className="flex flex-col rounded-2xl">
-        <p className="text-white text-center w-full lg:w-1/3 font-bold heading animate-bounce">
+        <p className="text-primary-content text-center w-full lg:w-1/3 font-bold heading animate-bounce">
           {title}
         </p>
         <div className="overflow-visible flex flex-col justify-center items-center gap-y-4 lg:flex-row md:gap-x-4">
@@ -30,7 +30,7 @@ export default function FeaturesSection() {
           />
 
           <div className="flex flex-col justify-center md:flex-row">
-            <div className="flex w-full lg:w-full h-fit mx-auto my-auto bg-white rounded-2xl border-4 border-[#331846] px-4 py-10 md:py-16 sm:px-10 -z-10 ">
+            <div className="flex w-full lg:w-full h-fit mx-auto my-auto bg-primary-content rounded-2xl border-4 border-[#331846] px-4 py-10 md:py-16 sm:px-10 -z-10 ">
               <p className="text-[#331846] text-center font-semibold text-lg lg:text-2xl">
                 {description}
               </p>

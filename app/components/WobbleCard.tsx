@@ -3,25 +3,27 @@ import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export function WobbleCardDemo() {
+  const isMobile = useIsMobile();
+
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <div className="flex flex-col md:flex-row justify-center my-auto items-center">
-        <p className="text-white text-center font-bold heading">
-          Iată ce am pregătit pentru tine
-        </p>
-        <Image
-          src={"/astronaut_chef.png"}
-          alt="header"
-          width={500}
-          height={500}
-          className="blur-none group-hover/image:blur-md  transition-all duration-200 overflow-visible -mt-20 -z-10"
-        />
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full -mt-32 bg-[#47B5FF] z-10">
+      <p className="text-white text-center font-bold heading">
+        Iată ce am pregătit pentru tine
+      </p>
+      <Image
+        src={"/astronaut_chef.png"}
+        alt="header"
+        width={isMobile ? 300 : 600}
+        height={isMobile ? 300 : 600}
+        className="blur-none group-hover/image:blur-md transition-all duration-200 overflow-visible md:-mt-5 lg:-mt-10 -z-10 "
+      />
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full -mt-20 md:-mt-32 bg-primary z-10">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border-4 border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-secondary min-h-[500px] lg:min-h-[300px] border-4 border-base-content"
           className=""
         >
           <div className="max-w-xs px-2">
@@ -48,7 +50,7 @@ export function WobbleCardDemo() {
             className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl px-2"
           />
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#EE4E4E] border-4 border-[#331846]">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-error border-4 border-base-content">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-white ">
               <span className="opacity-50">0</span>2
@@ -63,7 +65,7 @@ export function WobbleCardDemo() {
             bine conceptele.
           </p>
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border-4 border-black">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border-4 border-base-content">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-black">
               <span className="opacity-50">0</span>3
@@ -79,7 +81,7 @@ export function WobbleCardDemo() {
           </p>
         </WobbleCard>
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#211951] min-h-[500px] lg:min-h-[300px] border-4 border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-base-content/50 min-h-[500px] lg:min-h-[300px] border-4 border-base-content"
           className=""
         >
           <div className="max-w-xs">
