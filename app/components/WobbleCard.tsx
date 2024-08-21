@@ -3,57 +3,25 @@ import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
-import { TypewriterEffectSmoothDemo } from "./TypewritterEffect";
 
 export function WobbleCardDemo() {
-  const cardWords = [
-    {
-      text: "De ce",
-    },
-    {
-      text: "merita",
-      className: "dark:text-[#FFC94A] stroke-black",
-    },
-    {
-      text: "sa",
-    },
-    {
-      text: "inveti",
-    },
-    {
-      text: "cu",
-    },
-    {
-      text: "noi",
-    },
-  ];
-
-  const description = `Beneficiază de mini-cursuri interactive, tutoriale detaliate, articole
-        relevante și provocări săptămânale. În plus, poți împărtăși experiențele
-        tale de interviu și poți găsi oferte de joburi potrivite pentru tine.`;
-
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <div className="flex flex-row mb-20 border-2 border-black rounded-2xl bg-[#FFC94A]">
-        <div className="w-1/2 bg-white py-20 m-2 overflow-visible text-center rounded-2xl">
-          <p className="text-black font-bold text-5xl">
-            De ce merita sa inveti cu noi?
-          </p>
-        </div>
-        <div className="flex flex-col w-full  m-2 justify-center text-center">
-          <p className="text-black text-2xl font-medium">
-            Într-o lume plină de cursuri costisitoare și uneori inutile,
-            platforma noastră îți oferă o alternativă accesibilă și eficientă.
-            Aici, nu trebuie să cheltuiești sume mari de bani pentru a învăța
-            programare web. Beneficiezi de o pregătire constantă, resurse
-            relevante și suport personalizat, toate într-un singur loc.
-          </p>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full">
+      {/* <div className="flex flex-row justify-center my-auto items-center">
+        <p className="text-white text-center font-bold heading">
+          Iată ce am pregătit pentru tine
+        </p>
+        <Image
+          src={"/astronaut_chef.png"}
+          alt="header"
+          width={500}
+          height={500}
+          className="blur-none group-hover/image:blur-md  transition-all duration-200 overflow-visible -mt-20 -z-10"
+        />
+      </div> */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full -mt-32 bg-[#47B5FF] z-10">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border-2 border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border-4 border-black"
           className=""
         >
           <div className="max-w-xs px-2">
@@ -80,7 +48,7 @@ export function WobbleCardDemo() {
             className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl px-2"
           />
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#EE4E4E] border-2 border-black">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#EE4E4E] border-4 border-[#331846]">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-white ">
               <span className="opacity-50">0</span>2
@@ -95,7 +63,7 @@ export function WobbleCardDemo() {
             bine conceptele.
           </p>
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border-2 border-black">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border-4 border-black">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-black">
               <span className="opacity-50">0</span>3
@@ -111,7 +79,7 @@ export function WobbleCardDemo() {
           </p>
         </WobbleCard>
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#06283D] min-h-[500px] lg:min-h-[300px] border-2 border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#211951] min-h-[500px] lg:min-h-[300px] border-4 border-black"
           className=""
         >
           <div className="max-w-xs">
@@ -123,7 +91,7 @@ export function WobbleCardDemo() {
                 Resurse <br /> Diverse
               </p>
             </div>
-            <p className="mt-4 text-left  text-base/6 text-white">
+            <p className="mt-4 text-left text-base/6 text-white">
               Parcurge cursuri scurte și eficiente care te vor ajuta să înveți
               rapid concepte esențiale de programare web. "Accesează tutoriale
               pas cu pas care îți vor ghida învățarea și îți vor permite să

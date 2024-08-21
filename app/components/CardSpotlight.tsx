@@ -41,10 +41,12 @@ export function CardSpotlightDemo() {
         <CardSpotlight
           key={index}
           className={`h-full w-full md:min-w-[20rem] text-center ${
-            plan.standard ? "dark:bg-white" : "dark:bg-[#FFC94A]"
+            plan.standard
+              ? "dark:bg-white border-4"
+              : "dark:bg-[#FFC94A] border-4"
           }`}
         >
-          <div className="flex flex-col items-center justify-center text-black  gap-y-8 h-full">
+          <div className="flex flex-col items-center justify-center text-black gap-y-8 h-full">
             <div className="text-2xl md:text-4xl font-bold text-black">
               {plan.title}
             </div>
@@ -80,8 +82,8 @@ export function CardSpotlightDemo() {
                 buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,black_30%,black_100%)]"
                 buttonClass={`${
                   plan.standard
-                    ? "bg-[#FFC94A] hover:bg-white"
-                    : "bg-white hover:bg-[#FFC94A]"
+                    ? "bg-[#FFC94A] border-[1.5px] border-black hover:bg-white"
+                    : "bg-white border-[1.5px] border-black hover:bg-[#FFC94A]"
                 } inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full  px-12 py-4 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl `}
               />
             </div>

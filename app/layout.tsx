@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_Cherokee } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const suez = Noto_Sans_Cherokee({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Invata cu Snep",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={suez.className}>{children}</body>
     </html>
   );
 }

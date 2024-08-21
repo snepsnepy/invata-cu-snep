@@ -1,3 +1,4 @@
+import FeaturesSection from "./components/FeaturesSection";
 import { HeroHighlightDemo } from "./components/HeroHighlightDemo";
 import { HeroScrollDemo } from "./components/HeroScroll";
 import { NavbarDemo } from "./components/NavBarMenu";
@@ -9,6 +10,8 @@ export default function Home() {
       <div className="flex flex-col max-w-[1440px] mx-auto">
         <NavbarDemo />
         <HeroHighlightDemo />
+        <FeaturesSection />
+
         <WobbleCardDemo />
         <HeroScrollDemo />
       </div>

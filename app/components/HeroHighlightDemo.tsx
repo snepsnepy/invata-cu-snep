@@ -10,7 +10,7 @@ export function HeroHighlightDemo() {
 
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <div className="flex flex-col-reverse md:flex-row w-full px-4 md:px-0 h-full lg:gap-x-10 gap-y-8">
+      <div className="flex flex-col-reverse md:flex-row w-full md:px-0 h-full lg:gap-x-10 gap-y-8">
         <div className="flex flex-col items-center justify-center gap-y-4 ">
           <motion.h1
             initial={{
@@ -49,16 +49,16 @@ export function HeroHighlightDemo() {
             <TailwindcssButtons
               buttonName="Crează un cont"
               buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,black_30%,black_100%)]"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#FFC94A] px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl hover:bg-white border-2 border-black"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#FFC94A] px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl hover:bg-white border-[1.5px] border-black"
             />
           </div>
         </div>
-        <div className=" my-auto max-w-[700px] max-h-[700px] border-2 border-black rounded-full">
+        <div className="my-auto max-w-[700px] max-h-[700px] rounded-full">
           <Image
-            src={"/learning-tree.png"}
+            src={"/astronaut.png"}
             alt="header"
-            width={700}
-            height={700}
+            width={900}
+            height={900}
             className="rounded-full blur-none group-hover/image:blur-md transition-all duration-200"
           />
         </div>
