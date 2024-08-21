@@ -3,41 +3,27 @@ import Image from "next/image";
 import React from "react";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
-import { TypewriterEffectSmoothDemo } from "./TypewritterEffect";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export function WobbleCardDemo() {
-  const cardWords = [
-    {
-      text: "Pentru     ",
-    },
-    {
-      text: "începătorii",
-      className: "dark:text-[#FFC94A] stroke-black",
-    },
-    {
-      text: "în",
-    },
-    {
-      text: "IT",
-    },
-  ];
-
-  const description = `Beneficiază de mini-cursuri interactive, tutoriale detaliate, articole
-        relevante și provocări săptămânale. În plus, poți împărtăși experiențele
-        tale de interviu și poți găsi oferte de joburi potrivite pentru tine.`;
+  const isMobile = useIsMobile();
 
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <div className="pb-20 ">
-        <TypewriterEffectSmoothDemo
-          words={cardWords}
-          description={description}
-        />
-      </div>
+      <p className="text-white text-center font-bold heading">
+        Iată ce am pregătit pentru tine
+      </p>
+      <Image
+        src={"/astronaut_chef.png"}
+        alt="header"
+        width={isMobile ? 300 : 600}
+        height={isMobile ? 300 : 600}
+        className="blur-none group-hover/image:blur-md transition-all duration-200 overflow-visible md:-mt-5 lg:-mt-10 -z-10 "
+      />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full -mt-20 md:-mt-32 bg-primary z-10">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-secondary min-h-[500px] lg:min-h-[300px] border-4 border-base-content"
           className=""
         >
           <div className="max-w-xs px-2">
@@ -64,7 +50,7 @@ export function WobbleCardDemo() {
             className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl px-2"
           />
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#EE4E4E] border border-black">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-error border-4 border-base-content">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-white ">
               <span className="opacity-50">0</span>2
@@ -79,7 +65,7 @@ export function WobbleCardDemo() {
             bine conceptele.
           </p>
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border border-black">
+        <WobbleCard containerClassName="col-span-1 min-h-[300px] w-full bg-white border-4 border-base-content">
           <div className="flex gap-x-2">
             <div className="my-auto text-6xl lg:text-7xl font-extrabold text-black">
               <span className="opacity-50">0</span>3
@@ -95,7 +81,7 @@ export function WobbleCardDemo() {
           </p>
         </WobbleCard>
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#06283D] min-h-[500px] lg:min-h-[300px] border border-black"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-base-content/50 min-h-[500px] lg:min-h-[300px] border-4 border-base-content"
           className=""
         >
           <div className="max-w-xs">
@@ -107,7 +93,7 @@ export function WobbleCardDemo() {
                 Resurse <br /> Diverse
               </p>
             </div>
-            <p className="mt-4 text-left  text-base/6 text-white">
+            <p className="mt-4 text-left text-base/6 text-white">
               Parcurge cursuri scurte și eficiente care te vor ajuta să înveți
               rapid concepte esențiale de programare web. "Accesează tutoriale
               pas cu pas care îți vor ghida învățarea și îți vor permite să

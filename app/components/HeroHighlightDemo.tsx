@@ -10,7 +10,7 @@ export function HeroHighlightDemo() {
 
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <div className="flex flex-col-reverse md:flex-row w-full px-4 md:px-0 h-full lg:gap-x-10 gap-y-8">
+      <div className="flex flex-col-reverse md:flex-row w-full md:px-0 h-full lg:gap-x-10 gap-y-8">
         <div className="flex flex-col items-center justify-center gap-y-4 ">
           <motion.h1
             initial={{
@@ -25,15 +25,15 @@ export function HeroHighlightDemo() {
               duration: 0.5,
               ease: [0.4, 0.0, 0.2, 1],
             }}
-            className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-primary-content max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
           >
             {/* Title & Subtitle */}
             <div className="flex flex-col gap-y-2">
-              <div className="heading leading-normal md:leading-tight text-center md:text-left text-white">
+              <div className="heading leading-normal md:leading-tight text-center md:text-left text-primary-content">
                 <Highlight>Învață și Crește</Highlight> alături de o comunitate
                 dedicată programării!
               </div>
-              <div className="body-text text-center md:text-left md:pr-6 text-white font-normal text-sm md:text-md lg:text-lg">
+              <div className="body-text text-center md:text-left md:pr-6 text-primary-content font-normal text-sm md:text-md lg:text-lg">
                 Fie că ești la început de drum sau ai absolvit deja un curs și
                 cauți un loc de muncă, suntem aici pentru a te
                 <FlipWords words={words} />
@@ -44,21 +44,21 @@ export function HeroHighlightDemo() {
           <div className="flex flex-row justify-center md:justify-start w-full md:space-y-0 space-x-2 md:space-x-4">
             <TailwindcssButtons
               buttonName="Intră în cont"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl border border-black hover:bg-white hover:border hover:bg-[#FFC94A]"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-primary-content px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl border-2 border-black hover:bg-primary-content hover:border-2 hover:bg-primary-content/80"
             />
             <TailwindcssButtons
               buttonName="Crează un cont"
               buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,black_30%,black_100%)]"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#FFC94A] px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl hover:bg-white"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-secondary px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl hover:bg-primary-content border-[1.5px] border-black"
             />
           </div>
         </div>
-        <div className=" my-auto max-w-[700px] max-h-[700px]">
+        <div className="my-auto max-w-[700px] max-h-[700px] rounded-full">
           <Image
-            src={"/learning-tree.png"}
+            src={"/astronaut.png"}
             alt="header"
-            width={700}
-            height={700}
+            width={900}
+            height={900}
             className="rounded-full blur-none group-hover/image:blur-md transition-all duration-200"
           />
         </div>
