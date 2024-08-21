@@ -2,6 +2,7 @@
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import Image from "next/image";
 import React from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export default function FeaturesSection() {
   const title = "De ce merită să înveți cu noi?";
@@ -11,18 +12,7 @@ export default function FeaturesSection() {
             programare web. Beneficiezi de o pregătire constantă, resurse
             relevante și suport personalizat, toate într-un singur loc.`;
 
-  const [isMobile, setIsMobile] = React.useState(false);
-
-  React.useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => {
-      window.removeEventListener("resize", checkMobile);
-    };
-  }, []);
+  const isMobile = useIsMobile();
 
   return (
     <HeroHighlight className="py-32">

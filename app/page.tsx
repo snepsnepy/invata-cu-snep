@@ -11,7 +11,6 @@ export default function Home() {
         <NavbarDemo />
         <HeroHighlightDemo />
         <FeaturesSection />
-
         <WobbleCardDemo />
         <HeroScrollDemo />
       </div>

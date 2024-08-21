@@ -7,7 +7,7 @@ import { HeroHighlight } from "@/components/ui/hero-highlight";
 export function WobbleCardDemo() {
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      {/* <div className="flex flex-row justify-center my-auto items-center">
+      <div className="flex flex-col md:flex-row justify-center my-auto items-center">
         <p className="text-white text-center font-bold heading">
           Iată ce am pregătit pentru tine
         </p>
@@ -18,7 +18,7 @@ export function WobbleCardDemo() {
           height={500}
           className="blur-none group-hover/image:blur-md  transition-all duration-200 overflow-visible -mt-20 -z-10"
         />
-      </div> */}
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full -mt-32 bg-[#47B5FF] z-10">
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full bg-[#FFC94A] min-h-[500px] lg:min-h-[300px] border-4 border-black"
