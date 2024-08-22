@@ -41,7 +41,7 @@ const config = {
         primary: "#47B5FF",
         "primary-content": "#FFFFFF",
         secondary: "#FFC94A",
-        "base-content": "#211951",
+        "base-content": "#331846",
         error: "#EE4E4E",
       },
       borderRadius: {
