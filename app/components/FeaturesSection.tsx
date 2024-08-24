@@ -30,8 +30,8 @@ export default function FeaturesSection() {
           />
 
           <div className="flex flex-col justify-center md:flex-row">
-            <div className="flex w-full lg:w-full h-fit mx-auto my-auto bg-primary-content rounded-2xl border-4 border-[#331846] px-4 py-10 md:py-16 sm:px-10 -z-10 ">
-              <p className="text-[#331846] text-center font-semibold text-lg lg:text-2xl">
+            <div className="flex w-full lg:w-full h-fit mx-auto my-auto bg-primary-content rounded-2xl border-4 border-base-content px-4 py-10 md:py-16 sm:px-10 -z-10 ">
+              <p className="text-base-content text-center font-semibold text-lg lg:text-2xl">
                 {description}
               </p>
             </div>
