@@ -89,7 +89,7 @@ export default function FAQSection() {
                 </p>
               </div>
               <Modal>
-                <ModalTrigger className="group/modal-btn">
+                <ModalTrigger className="group/modal-btn flex p-0">
                   <Image
                     src={"/arrow.svg"}
                     alt="header"
