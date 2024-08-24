@@ -63,16 +63,6 @@ export function HeroHighlightDemo() {
           />
         </div>
       </div>
-      {/* <div className="flex flex-col items-center  w-full">
-        <div>Powered by</div>
-        <Image
-          src={"/logo.png"}
-          alt="logo"
-          width={150}
-          height={40}
-          className="opacity-100"
-        />
-      </div> */}
     </HeroHighlight>
   );
 }
