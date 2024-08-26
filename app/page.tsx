@@ -10,6 +10,8 @@ import { useIsMobile } from "./hooks/useIsMobile";
 import Image from "next/image";
 
 export default function Home() {
+  const isMobile = useIsMobile();
+
   return (
     <main className="dark bg-primary px-4">
       <div className="flex flex-col max-w-[1440px] mx-auto">
@@ -23,7 +25,7 @@ export default function Home() {
         <WobbleCard containerClassName="min-h-[300px] bg-transparent border-2 border-base-content mt-20 lg:mt-32">
           <div className="flex flex-row justify-center">
             <div className="max-w-2xl p-4">
-              <h1 className="relative z-10 text-lg md:text-7xl bg-clip-text text-base-content text-center font-sans font-bold">
+              <h1 className="relative z-10 heading bg-clip-text text-base-content text-center font-sans font-bold">
                 Join the waitlist
               </h1>
               <p></p>
@@ -42,33 +44,38 @@ export default function Home() {
             </div>
           </div>
         </WobbleCard>
-        <div className="flex flex-row w-full min-h-[300px] p-4 items-center">
-          <div className="flex flex-col w-full gap-y-1 justify-center items-center">
-            <div className="text-white text-base">Powered by</div>
-            <Image src={"/logo.png"} alt="logo" width={150} height={50} />
+        <div className="flex flex-col md:flex-row w-full min-h-[300px] p-4 items-center gap-y-6">
+          <div className="flex flex-col w-full gap-y-1 items-center">
+            <div className="text-white text-sm md:text-md">Powered by</div>
+            <Image
+              src={"/logo.png"}
+              alt="logo"
+              width={isMobile ? 100 : 150}
+              height={50}
+            />
           </div>
 
-          <div className="flex flex-row w-full gap-x-10">
+          <div className="flex flex-col md:flex-row w-full gap-x-10 gap-y-6">
             <div className="flex flex-col gap-y-6">
               <div className="flex flex-col justify-start w-full gap-y-2 text-base-content">
-                <p className="font-bold text-xl">Contactaza-ne</p>
-                <div className="flex flex-col gap-y-2">
+                <p className="font-bold text-md md:text-xl">Contactaza-ne</p>
+                <div className="flex flex-col gap-y-2 text-sm md:text-md">
                   <p className="hover:text-secondary hover:cursor-pointer">
                     contact@invatacusnep.ro
                   </p>
                 </div>
               </div>
               <div className="flex flex-col justify-start w-full gap-y-2 text-base-content">
-                <p className="font-bold text-xl">Resurse</p>
-                <div className="flex flex-col gap-y-2">
+                <p className="font-bold text-md md:text-xl">Resurse</p>
+                <div className="flex flex-col gap-y-2 text-sm md:text-md">
                   <p>Cookie Notice</p>
                   <p>Raporteaza o problema</p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col justify-start w-full gap-y-2 text-base-content ">
-              <p className="font-bold text-xl">Company</p>
-              <div className="flex flex-col gap-y-2">
+              <p className="font-bold text-md md:text-xl">Company</p>
+              <div className="flex flex-col gap-y-2 text-sm md:text-md">
                 <p>Cine suntem?</p>
                 <p>Servicii</p>
                 <p>Preturi</p>
