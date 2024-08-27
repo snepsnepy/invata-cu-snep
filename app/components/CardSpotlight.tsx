@@ -79,12 +79,12 @@ export function CardSpotlightDemo() {
             <div>
               <TailwindcssButtons
                 buttonName="Alege pachetul"
-                buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,black_30%,black_100%)]"
+                buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,#331846_30%,#331846_100%)]"
                 buttonClass={`${
                   plan.standard
                     ? "bg-secondary border-[1.5px] border-black hover:bg-primary-content"
                     : "bg-primary-content border-[1.5px] border-black hover:bg-secondary"
-                } inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full  px-12 py-4 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl `}
+                } inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full  px-12 py-4 text-sm lg:text-base font-semibold text-base-content backdrop-blur-3xl `}
               />
             </div>
           </div>

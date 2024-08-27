@@ -29,7 +29,7 @@ export function HeroHighlightDemo() {
           >
             {/* Title & Subtitle */}
             <div className="flex flex-col gap-y-2">
-              <div className="heading leading-normal md:leading-tight text-center md:text-left text-primary-content">
+              <div className="heading leading-normal md:leading-normal xl:leading-snug text-center md:text-left text-primary-content">
                 <Highlight>Învață și Crește</Highlight> alături de o comunitate
                 dedicată programării!
               </div>
@@ -44,12 +44,12 @@ export function HeroHighlightDemo() {
           <div className="flex flex-row justify-center md:justify-start w-full md:space-y-0 space-x-2 md:space-x-4">
             <TailwindcssButtons
               buttonName="Intră în cont"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-primary-content px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl border-2 border-black hover:bg-primary-content hover:border-2 hover:bg-primary-content/80"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-primary-content px-7 py-2 text-sm lg:text-base font-semibold text-base-content backdrop-blur-3xl border-2 border-base-content hover:bg-primary-content hover:border-2 hover:bg-primary-content/80"
             />
             <TailwindcssButtons
               buttonName="Crează un cont"
-              buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFFFFF_0%,black_30%,black_100%)]"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-secondary px-7 py-2 text-sm lg:text-base font-semibold text-black backdrop-blur-3xl hover:bg-primary-content border-[1.5px] border-black"
+              buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#331846_0%,white_30%,white_100%)]"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-base-content px-7 py-2 text-sm lg:text-base font-semibold text-primary-content backdrop-blur-3xl hover:bg-primary-content"
             />
           </div>
         </div>
