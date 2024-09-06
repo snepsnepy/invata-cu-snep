@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useScrollToSection } from "../hooks/useScrollToSection";
+import { useScrollTo } from "framer-motion-scroll-to-hook";
 
 export function NavbarDemo() {
   return (
@@ -15,7 +15,7 @@ export function NavbarDemo() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
-  const scrollToServices = useScrollToSection("myComp");
+  const scrollToId = useScrollTo();
 
   return (
     <div
@@ -25,13 +25,7 @@ function Navbar({ className }: { className?: string }) {
       )}
     >
       <Menu setActive={setActive}>
-        <Link
-          href="#myComp"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToServices;
-          }}
-        >
+        <Link href="#myComp" onClick={() => scrollToId("#myComp", -500)}>
           <MenuItem setActive={setActive} item="Servicii"></MenuItem>
         </Link>
         <MenuItem setActive={setActive} item="Products"></MenuItem>
