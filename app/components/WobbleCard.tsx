@@ -21,7 +21,10 @@ export function WobbleCardDemo() {
         className="blur-none group-hover/image:blur-md transition-all duration-200 overflow-visible md:-mt-5 lg:-mt-10 -z-10 "
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full -mt-20 md:-mt-32 bg-primary z-10">
+      <div
+        className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto w-full -mt-20 md:-mt-32 bg-primary z-10"
+        id="myComp"
+      >
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full bg-secondary min-h-[500px] lg:min-h-[300px] border-4 border-base-content"
           className=""

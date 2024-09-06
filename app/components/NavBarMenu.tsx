@@ -1,7 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { useScrollToSection } from "../hooks/useScrollToSection";
 
 export function NavbarDemo() {
   return (
@@ -13,6 +15,8 @@ export function NavbarDemo() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const scrollToServices = useScrollToSection("myComp");
+
   return (
     <div
       className={cn(
@@ -21,7 +25,15 @@ function Navbar({ className }: { className?: string }) {
       )}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} item="Servicii"></MenuItem>
+        <Link
+          href="#myComp"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToServices;
+          }}
+        >
+          <MenuItem setActive={setActive} item="Servicii"></MenuItem>
+        </Link>
         <MenuItem setActive={setActive} item="Products"></MenuItem>
         <MenuItem setActive={setActive} item="Pricing"></MenuItem>
       </Menu>
