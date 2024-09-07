@@ -61,7 +61,10 @@ export default function FAQSection() {
 
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <p className="heading text-white text-center mb-5 md:mb-10">
+      <p
+        className="heading text-white text-center mb-5 md:mb-10"
+        id="intrebari"
+      >
         Întrebări primite frecvent
       </p>
 

@@ -6,12 +6,12 @@ import { CardSpotlightDemo } from "./CardSpotlight";
 import Image from "next/image";
 import { useIsMobile } from "../hooks/useIsMobile";
 
-export function HeroScrollDemo() {
+export function SubscriptionSection() {
   const isMobile = useIsMobile();
 
   return (
     <HeroHighlight>
-      <div className="flex flex-col overflow-hidden ">
+      <div className="flex flex-col overflow-hidden" id="abonament">
         <Image
           src={"/astronaut_travel.png"}
           alt="header"

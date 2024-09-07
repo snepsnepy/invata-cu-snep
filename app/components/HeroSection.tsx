@@ -5,7 +5,7 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { FlipWords } from "@/components/ui/flip-words";
 import { TailwindcssButtons } from "./Buttons";
 
-export function HeroHighlightDemo() {
+export function HeroSection() {
   const words = ["îndruma", "ajuta", "sprijini"];
 
   return (
