@@ -37,12 +37,6 @@ export default function FeaturesSection() {
             </div>
           </div>
         </div>
-
-        {/* <div className="flex flex-col w-full  m-2 justify-center text-center">
-        <p className="text-black text-sm md:text-md lg:text-lg font-medium">
-          {description}
-        </p>
-      </div> */}
       </div>
     </HeroHighlight>
   );

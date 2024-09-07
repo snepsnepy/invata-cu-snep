@@ -5,7 +5,7 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { FlipWords } from "@/components/ui/flip-words";
 import { TailwindcssButtons } from "./Buttons";
 
-export function HeroHighlightDemo() {
+export function HeroSection() {
   const words = ["îndruma", "ajuta", "sprijini"];
 
   return (
@@ -48,8 +48,8 @@ export function HeroHighlightDemo() {
             />
             <TailwindcssButtons
               buttonName="Crează un cont"
-              buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#331846_0%,white_30%,white_100%)]"
-              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-base-content px-7 py-2 text-sm lg:text-base font-semibold text-primary-content backdrop-blur-3xl hover:bg-primary-content"
+              buttonAnimation="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#331846_0%,#FFC94A_30%,#FFC94A_100%)]"
+              buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-base-content px-7 py-2 text-sm lg:text-base font-semibold text-primary-content backdrop-blur-3xl hover:bg-base-content hover:text-secondary"
             />
           </div>
         </div>

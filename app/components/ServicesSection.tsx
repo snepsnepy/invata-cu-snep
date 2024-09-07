@@ -5,12 +5,12 @@ import { WobbleCard } from "@/components/ui/wobble-card";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import { useIsMobile } from "../hooks/useIsMobile";
 
-export function WobbleCardDemo() {
+export function ServicesSection() {
   const isMobile = useIsMobile();
 
   return (
     <HeroHighlight className="py-20 lg:py-32">
-      <p className="text-white text-center font-bold heading">
+      <p className="text-white text-center font-bold heading" id="servicii">
         Iată ce am pregătit pentru tine
       </p>
       <Image
