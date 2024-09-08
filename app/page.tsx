@@ -9,7 +9,7 @@ import { ServicesSection } from "./components/ServicesSection";
 
 export default function Home() {
   return (
-    <main className="dark  px-4">
+    <main className="px-4">
       <div className="flex flex-col">
         <NavigationBar />
         <HeroSection />
