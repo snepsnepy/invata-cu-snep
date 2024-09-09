@@ -33,7 +33,7 @@ function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} item="Intrebari"></MenuItem>
         </Link>
 
-        <Link href="#" className="flex">
+        <Link href="/login" className="flex">
           <TailwindcssButtons
             buttonName="Intră în cont"
             buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-secondary px-7 py-2 text-sm lg:text-base font-semibold text-base-content backdrop-blur-3xl border-2 border-base-content hover:bg-primary-content hover:border-2 hover:bg-primary-content/80"
