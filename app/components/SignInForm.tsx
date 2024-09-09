@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { IconBrandGithub, IconBrandGoogle } from "@tabler/icons-react";
 
-export function SignUpForm() {
+export function SignInForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -13,48 +13,28 @@ export function SignUpForm() {
   return (
     <div className="max-w-lg w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-primary-content border-[3px] border-base-content z-10">
       <div className="flex flex-col gap-y-2">
-        <h2 className="subheading text-base-content">
-          Creează-ți contul acum!
-        </h2>
+        <h2 className="subheading text-base-content">Bine ai revenit!</h2>
         <p className="text-sm md:text-base text-base-content">
-          Înscrie-te și accesează toate resursele necesare pentru a învăța și
-          progresa în programare.
+          Autentifică-te pentru a continua să înveți și să îți dezvolți
+          abilitățile.
         </p>
       </div>
 
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Nume" type="text" />
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Prenume" type="text" />
-          </LabelInputContainer>
-        </div>
-        <LabelInputContainer className="mb-4">
+      <form className="my-2" onSubmit={handleSubmit}>
+        <LabelInputContainer>
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="Email" type="email" />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
+        <LabelInputContainer>
           <Label htmlFor="password">Password</Label>
           <Input id="password" placeholder="Parolă" type="password" />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="twitterpassword">Your twitter password</Label>
-          <Input
-            id="twitterpassword"
-            placeholder="Repetă parola"
-            type="twitterpassword"
-          />
-        </LabelInputContainer>
 
         <button
-          className="bg-gradient-to-br relative group/btn dark:bg-secondary hover:dark:bg-base-content hover:text-secondary w-full text-base-content font-semibold rounded-2xl h-10 font-medium border border-base-content"
+          className="bg-gradient-to-br relative mt-10 group/btn dark:bg-secondary hover:dark:bg-base-content hover:text-secondary w-full text-base-content font-semibold rounded-2xl h-10 border border-base-content"
           type="submit"
         >
-          Creează cont &rarr;
+          Intră în cont &rarr;
         </button>
 
         <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
