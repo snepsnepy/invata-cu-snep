@@ -5,11 +5,12 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useScrollTo } from "framer-motion-scroll-to-hook";
 import { TailwindcssButtons } from "./Buttons";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 export function NavigationBar() {
   return (
     <div className="relative w-full flex items-center justify-center ">
-      <Navbar className="top-2" />
+      <Navbar className="top-2 px-4" />
     </div>
   );
 }
@@ -17,6 +18,20 @@ export function NavigationBar() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   const scrollToId = useScrollTo();
+  const { isMobile, isClient } = useIsMobile();
+
+  const LoginButton = () => {
+    if (isClient && !isMobile) {
+      return (
+        <Link href="/login" className="flex">
+          <TailwindcssButtons
+            buttonName="Intră în cont"
+            buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-secondary px-7 py-2 text-sm lg:text-base font-semibold text-base-content backdrop-blur-3xl border-2 border-base-content hover:bg-primary-content hover:border-2 hover:bg-primary-content/80"
+          />
+        </Link>
+      );
+    }
+  };
 
   return (
     <div
@@ -33,12 +48,7 @@ function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} item="Intrebari"></MenuItem>
         </Link>
 
-        <Link href="/login" className="flex">
-          <TailwindcssButtons
-            buttonName="Intră în cont"
-            buttonClass="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-secondary px-7 py-2 text-sm lg:text-base font-semibold text-base-content backdrop-blur-3xl border-2 border-base-content hover:bg-primary-content hover:border-2 hover:bg-primary-content/80"
-          />
-        </Link>
+        <LoginButton />
       </Menu>
     </div>
   );
